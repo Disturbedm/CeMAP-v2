@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CeMAP Flashcard App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="dropdown">
+        <button class="dropbtn">CeMAP PDFs</button>
+        <div class="dropdown-content">
+            <a href="/CMAP/PDFs/UKFR_CeMAP1_202223_Topic1.pdf.pdf" target="_blank">Topic 1</a>
+            <a href="/CMAP/PDFs/UKFR_CeMAP1_202223_Topic2.pdf.pdf" target="_blank">Topic 2</a>
+            <a href="/CMAP/PDFs/UKFR_CeMAP1_202223_Topic3.pdf.pdf" target="_blank">Topic 3</a>
+            <a href="/CMAP/PDFs/UKFR_CeMAP1_202223_Topic4.pdf.pdf" target="_blank">Topic 4</a>
+            <a href="/CMAP/PDFs/UKFR_CeMAP1_202223_Topic5.pdf.pdf" target="_blank">Topic 5</a>
+            <a href="/CMAP/PDFs/UKFR_CeMAP1_202223_Topic6.pdf.pdf" target="_blank">Topic 6</a>
+            <a href="/CMAP/PDFs/UKFR_CeMAP1_202223_Topic7.pdf.pdf" target="_blank">Topic 7</a>
+            <a href="/CMAP/PDFs/UKFR_CeMAP1_202223_Topic8.pdf.pdf" target="_blank">Topic 8</a>
+            <a href="/CMAP/PDFs/UKFR_CeMAP1_202223_Topic9.pdf.pdf" target="_blank">Topic 9</a>
+            <a href="/CMAP/PDFs/UKFR_CeMAP1_202223_Topic10.pdf.pdf" target="_blank">Topic 10</a>
+            <a href="/CMAP/PDFs/UKFR_CeMAP1_202223_Topic11.pdf.pdf" target="_blank">Topic 11</a>
+            <a href="/CMAP/PDFs/UKFR_CeMAP1_202223_Topic12.pdf.pdf" target="_blank">Topic 12</a>
+            <a href="/CMAP/PDFs/UKFR_CeMAP1_202223_Topic13.pdf.pdf" target="_blank">Topic 13</a>
+            <a href="/CMAP/PDFs/UKFR_CeMAP1_202223_Topic14.pdf.pdf" target="_blank">Topic 14</a>
+            <a href="/CMAP/PDFs/UKFR_CeMAP1_202223_Topic15.pdf.pdf" target="_blank">Topic 15</a>
+            <a href="/CMAP/PDFs/UKFR_CeMAP1_202223_Topic16.pdf.pdf" target="_blank">Topic 16</a>
+        </div>
+    </div>
+    <div class="dropdown">
+      <button class="arrow-btn">Topic Hold ▼</span>
+      <div id="topic-dropdown" class="dropdown-content">
+          <span class="topic-button" data-topic="1">Topic 1</span>
+          <span class="topic-button" data-topic="2">Topic 2</span>
+          <span class="topic-button" data-topic="3">Topic 3</span>
+          <span class="topic-button" data-topic="4">Topic 4</span>
+          <span class="topic-button" data-topic="5">Topic 5</span>
+          <span class="topic-button" data-topic="6">Topic 6</span>
+          <span class="topic-button" data-topic="7">Topic 7</span>
+          <span class="topic-button" data-topic="8">Topic 8</span>
+          <span class="topic-button" data-topic="9">Topic 9</span>
+          <span class="topic-button" data-topic="10">Topic 10</span>
+          <span class="topic-button" data-topic="11">Topic 11</span>
+          <span class="topic-button" data-topic="12">Topic 12</span>
+          <span class="topic-button" data-topic="13">Topic 13</span>
+          <span class="topic-button" data-topic="14">Topic 14</span>
+          <span class="topic-button" data-topic="15">Topic 15</span>
+          <span class="topic-button" data-topic="16">Topic 16</span>
+          <span class="topic-button" id="topic-button-clear" data-topic="all">Clear Topic Selection</span>
+      </div>
+  </div>
+  </nav>
+  <h1>CeMAP Flash Cards</h1>
+    <div class="card-container">
+      <div class="card" id="flashcard">
+        <div class="card-inner">
+          <div class="card-front" id="card-front">Word</div>
+          <img id="question-mark" src="./QuestionMark.png" alt="Question Mark" />
+        </div>
+        <div class="card-inner">
+          <div class="card-back" id="card-back">Description</div>
+          <img id="answer-icon" src="./AnswerIcon.png" alt="Answer Icon" />
+          <div class="card-topic" id="card-topic">Topic</div>
+        </div>
+      </div>
+      <button id="flip-button">Flip</button>
+      <button id="next-button">Next Random Card</button>
+    </div>
+    <div class="timer-container">
+      <h2>Stopwatch</h2>
+      <div id="timer">00:00:00</div>
+      <div class="timer_button-container">
+        <button id="start-button">Start</button>
+        <button id="stop-button">Stop</button>
+        <button id="reset-button">Reset</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
