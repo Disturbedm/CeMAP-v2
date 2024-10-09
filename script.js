@@ -3,7 +3,7 @@ const cardFront = document.getElementById('card-front');
 const cardBack = document.getElementById('card-back');
 const cardTopic = document.getElementById('card-topic');
 const flipButton = document.getElementById('flip-button');
-const nextButton = document.getElementById('next-button');
+const randomButton = document.getElementById('random-button');
 const questionMark = document.getElementById('question-mark');
 const answerIcon = document.getElementById('answer-icon');
 
@@ -150,7 +150,7 @@ flipButton.addEventListener('click', () => {
 });
 
 // Next button functionality
-nextButton.addEventListener('click', () => {
+randomButton.addEventListener('click', () => {
     showRandomCard();
 });
 
