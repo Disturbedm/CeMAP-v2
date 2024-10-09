@@ -236,6 +236,16 @@ h1 {
 
 }
 
+#random-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  font-size: 40px;
+  margin-top: 10px;
+  border-radius: 8px;
+
+}
+
 .timer-container {
   display: flex;
   flex-direction: column;
