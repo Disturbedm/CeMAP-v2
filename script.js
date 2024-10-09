@@ -3,7 +3,7 @@ const cardFront = document.getElementById('card-front');
 const cardBack = document.getElementById('card-back');
 const cardTopic = document.getElementById('card-topic');
 const flipButton = document.getElementById('flip-button');
-const randomButton = document.getElementById('random-button');
+const nextButton = document.getElementById('next-button');
 const questionMark = document.getElementById('question-mark');
 const answerIcon = document.getElementById('answer-icon');
 
@@ -96,7 +96,7 @@ let cards = [
     // { word: "Test Card 3", description: "Test Description 3", topic: "1" },
     // { word: "Test Card 2", description: "Test Description 2", topic: "1" }
 
-
+    
 ];
 
 let currentCards = cards;
@@ -134,7 +134,7 @@ function showRandomCard() {
 // Flip functionality
 flipButton.addEventListener('click', () => {
     flashcard.classList.toggle('flipped');
-
+    
     // Check if the card is flipped
     if (flashcard.classList.contains('flipped')) {
         // Hide the question mark and show the answer icon when the back is shown
@@ -149,8 +149,8 @@ flipButton.addEventListener('click', () => {
     }
 });
 
-// Random button functionality 1
-randomButton.addEventListener('click', () => {
+// Next button functionality
+nextButton.addEventListener('click', () => {
     showRandomCard();
 });
 
@@ -209,7 +209,7 @@ function updateTimer() {
     const remainingSeconds = seconds % 60;
 
     timerDisplay.textContent = 
-        ${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')};
+        `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
 }
 
 startButton.addEventListener('click', () => {
