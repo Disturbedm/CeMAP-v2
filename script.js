@@ -149,7 +149,7 @@ flipButton.addEventListener('click', () => {
     }
 });
 
-// Next button functionality
+// Random button functionality
 randomButton.addEventListener('click', () => {
     showRandomCard();
 });
