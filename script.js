@@ -96,7 +96,7 @@ let cards = [
     // { word: "Test Card 3", description: "Test Description 3", topic: "1" },
     // { word: "Test Card 2", description: "Test Description 2", topic: "1" }
 
-    
+
 ];
 
 let currentCards = cards;
@@ -134,7 +134,7 @@ function showRandomCard() {
 // Flip functionality
 flipButton.addEventListener('click', () => {
     flashcard.classList.toggle('flipped');
-    
+
     // Check if the card is flipped
     if (flashcard.classList.contains('flipped')) {
         // Hide the question mark and show the answer icon when the back is shown
