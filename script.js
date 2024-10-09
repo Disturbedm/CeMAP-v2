@@ -4,6 +4,7 @@ const cardBack = document.getElementById('card-back');
 const cardTopic = document.getElementById('card-topic');
 const flipButton = document.getElementById('flip-button');
 const randomButton = document.getElementById('random-button');
+const nextButton = document.getElementById('next-button'); // Next button
 const questionMark = document.getElementById('question-mark');
 const answerIcon = document.getElementById('answer-icon');
 
@@ -13,9 +14,10 @@ let cards = [
 ];
 
 let currentCards = cards;
+let currentIndex = 0; // Track the current card index
 
 function showCard(index) {
-    if (currentCards.length > 0) {
+    if (currentCards.length > 0 && index < currentCards.length) {
         cardFront.textContent = currentCards[index].word;
         cardBack.textContent = currentCards[index].description;
         cardTopic.textContent = 'For details, refer to Topic: ' + currentCards[index].topic;
@@ -32,6 +34,7 @@ function showCard(index) {
 function showRandomCard() {
     if (currentCards.length > 0) {
         const randomIndex = Math.floor(Math.random() * currentCards.length);
+        currentIndex = randomIndex; // Update current index
         showCard(randomIndex);
     } else {
         cardFront.textContent = 'No cards have been added for this topic.';
@@ -40,6 +43,14 @@ function showRandomCard() {
         questionMark.style.display = 'block';
         answerIcon.style.display = 'none';
         cardTopic.style.display = 'block';
+    }
+}
+
+// Show next card
+function showNextCard() {
+    if (currentCards.length > 0) {
+        currentIndex = (currentIndex + 1) % currentCards.length; // Cycle through cards
+        showCard(currentIndex);
     }
 }
 
@@ -61,6 +72,11 @@ flipButton.addEventListener('click', () => {
 // Random button functionality
 randomButton.addEventListener('click', () => {
     showRandomCard();
+});
+
+// Next button functionality
+nextButton.addEventListener('click', () => {
+    showNextCard();
 });
 
 // Topic buttons
@@ -88,6 +104,7 @@ topicButtons.forEach(button => {
             currentCards = selectedTopics.length === 0 ? cards : cards.filter(card => selectedTopics.includes(card.topic));
         }
 
+        currentIndex = 0; // Reset index when changing topics
         showRandomCard();
     });
 });
