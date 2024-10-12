@@ -4,8 +4,10 @@ const cardBack = document.getElementById('card-back');
 const cardTopic = document.getElementById('card-topic');
 const flipButton = document.getElementById('flip-button');
 const randomButton = document.getElementById('random-button');
+const nextButton = document.getElementById('next-button');
 const questionMark = document.getElementById('question-mark');
 const answerIcon = document.getElementById('answer-icon');
+
 
 let cards = [
     { word: "Why do we need money ?", description: "We need a separate commodity that people will accept in exchange for any product, which forms a common denominator against which the value of all products can be measured.", topic: "1" },
@@ -38,7 +40,7 @@ let cards = [
     { word: "Explain the Bank of Englands role in being - 'Issuer of banknotes'.", description: "The Bank of England has a duty to ensure an adaquate supply of notes is in circulation.", topic: "1" },
     { word: "Explain the Bank of Englands role in being - 'Banker to the goverment'.", description: "It is the holder of the goverments own account. The BOE provides fiinance to cover any deficit by making automatic loans. If there is a surplus the Bank may lend it out as part of it's general debt management policy (DMP).", topic: "1" },
     { word: "Explain the Bank of Englands role in being - 'Banker to the banks'.", description: "All major banks have accounts with the BOE for depositing or obtaining cash. In this capacity, the BOE can wield cosiderable influence over the rates of interest in various money markets by changing the rates it charges banks for borrowing or depositing.", topic: "1" },
-    { word: "Explain the Bank of Englands role in being - 'Advisor to the goverment'.", description: "The BOE has built up specialised knowledge over many years regarding the UK's economy. Due to this it is able to help the goverment formulate it's monetary policy. The BOE roles in this was signficantly increased in 1997, when full responsibility was given to the MPC (Monetary Policy Committee) to set the UK's interest rates 8 times a year. This is done to ensure the goverment hits it's inflation target is met.", topic: "1" },
+    { word: "Explain the Bank of Englands role in being - 'Advisor to the goverment'.", description: "The BOE has built up specialised knowledge over many years regarding the UK's economy. Due to this it is able to help the goverment formulate it's monetary policy. The BOE roles in this was signficantly increased in 1997, when full responsibility was given to the MPC (Monetary Policy Committee) to set the UK's interest rates 8 times a year. This is done to ensure the goverment hits it's inflation target is met.", topic: "1" }
     // { word: "Test Card 2", description: "Test Description 2", topic: "1" },
     // { word: "Test Card 3", description: "Test Description 3", topic: "1" },
     // { word: "Test Card 3", description: "Test Description 3", topic: "1" },
@@ -95,11 +97,29 @@ let cards = [
     // { word: "Test Card 2", description: "Test Description 2", topic: "1" },
     // { word: "Test Card 3", description: "Test Description 3", topic: "1" },
     // { word: "Test Card 2", description: "Test Description 2", topic: "1" }
-
-    
 ];
 
 let currentCards = cards;
+
+let currentIndex = 0;
+    
+// Function to show the next card in sequence
+function showNextCard() {
+    if (currentCards.length > 0) {
+        currentIndex = (currentIndex + 1) % currentCards.length; // Increment and loop if needed
+        showCard(currentIndex);
+    } else {
+        cardFront.textContent = 'No cards available.';
+        cardBack.textContent = '';
+        cardTopic.textContent = '';
+    }
+}
+
+nextButton.addEventListener('click', showNextCard);
+
+showCard(currentIndex); // Show the first card initially
+
+
 
 function showCard(index) {
     if (currentCards.length > 0) {
