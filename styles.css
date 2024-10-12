@@ -118,7 +118,7 @@ h1 {
   text-align: center;
   text-decoration: underline;
   font-size: 60px;
-  margin-top: 0px;
+  margin-top: 20px;
 }
 
 .card-container {
@@ -180,7 +180,7 @@ h1 {
 #answer-icon {
   position: absolute;
   top: -120px;
-  right: -140px;
+  right: -100px;
   width: 200px;
   height: auto;
   z-index: 3; 
