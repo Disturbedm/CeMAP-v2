@@ -57,7 +57,7 @@ let cards = [
     { question: "Which body within the European System of Financial Supervision has direct supervisory responsibility for credit reference agencies?", description: "The European Securities and Markets Agency", topic: "2" },
     { question: "What is the public sector net cash (PSNC) requirement?", description: "A cash measure of the public sector's short-term net financing requirements", topic: "2" },
     { question: "What statement best describes fiscal policy?", description: "Government use of public sector spending, revenue, borrowing and saving to influence money supply and the level of economic activity", topic: "2" },
-    // { question: "Test Card 2", description: "Test Description 2", topic: "2" },
+    { question: "Which of the following is NOT an aim of the 'European Supervisory Authorities'. 'To create a single EU rulebook by developing draft standards', 'To consider consumer protection issues', 'To draft statutory instruments binding on each EU country', or 'To conduct reviews of national supervisory authorities to improve consistency'", description: "'To draft statutory instruments binding on each EU country'", topic: "2" },
     // { question: "Test Card 2", description: "Test Description 2", topic: "2" },
     // { question: "Test Card 2", description: "Test Description 2", topic: "2" },
     // { question: "Test Card 2", description: "Test Description 2", topic: "2" },
