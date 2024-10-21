@@ -75,7 +75,7 @@ let cards = [
     { question: "Can 'Capital Gains Tax' (CGT) annual exempt amount be carried forward if all/partial amount of it is not utilised in that tax year?", description: "No. The CGT annual exempt amount cannot be carried forward if it remains unused. It is a case of 'use it or lose it' but a new allowance will be available in the next tax year.", topic: "4" },
     { question: "A residence nil rate band was introduced from April 2017 to help people protect the value of their MAIN residence from inheritance tax. What amount does this nil rate band cover upto before it starts to reduce the rate?", description: "£2 Million", topic: "4" },
     { question: "By what amount does the value of the residence nil rate band get reduced or 'taper off' when the net value of a persons estate exceeds an upper threshold", description: "The residence nil rate band is reduced at a rate of £1 of allowance for every £2 that the net value of the estate exceeds £2 million.", topic: "4" },
-    // { question: "Test Card 2", description: "Test Description 2", topic: "4" },
+    { question: "Where someone buys a property in Wales, they should consider that they may be required to pay?", description: "Land transaction tax", topic: "4" },
     // { question: "Test Card 2", description: "Test Description 2", topic: "4" },
     // { question: "Test Card 2", description: "Test Description 2", topic: "4" },
     // { question: "Test Card 2", description: "Test Description 2", topic: "4" },
