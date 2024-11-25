@@ -79,7 +79,7 @@ let cards = [
     { question: "One of the eligibility criteria for Jobseeker’s Allowance is that the claimant must be...", description: "...out of work or working less than 16 hours a week and actively seeking work", topic: "5" },
     { question: "Which State benefit is currently in the process of being phased out and replaced by Personal Independence Payment?", description: "Disability Living Allowance", topic: "5" },
     { question: "Personal Independence Payment is composed of how many different components?", description: "2. PIP (like Disability Living Allowance) comprises two components; A care (daily living) component and a mobility component. Each component is payable at standard and enhanced rates.", topic: "5" },
-    // { question: "Test Card 2", description: "Test Description 2", topic: "5" },
+    { question: "If someone is recently employed OR self-employed and is pregnant, what maternity benefit can they apply for? Statutory Maternity Pay (SMP) or Maternity Allowance?", description: "Maternity Allowance. Statutory Maternity Pay(SMP) is only payable to this employed for at least 26 weeks. In the case of self-employed as they are not employed by an employer SMP would not be possible for that alone.", topic: "5" },
     // { question: "Test Card 2", description: "Test Description 2", topic: "5" },
     // { question: "Test Card 2", description: "Test Description 2", topic: "5" },
     // { question: "Test Card 2", description: "Test Description 2", topic: "5" },
